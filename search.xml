@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Node中运用Mysql语句进行增改删查</title>
-    <url>/2022/07/26/Node%E4%B8%AD%E8%BF%90%E7%94%A8Mysql%E8%AF%AD%E5%8F%A5%E8%BF%9B%E8%A1%8C%E5%A2%9E%E6%94%B9%E5%88%A0%E6%9F%A5/</url>
+    <url>/Ayer-Myweb/2022/07/26/Node%E4%B8%AD%E8%BF%90%E7%94%A8Mysql%E8%AF%AD%E5%8F%A5%E8%BF%9B%E8%A1%8C%E5%A2%9E%E6%94%B9%E5%88%A0%E6%9F%A5/</url>
     <content><![CDATA[<h2 id="导入Mysql模块"><a href="#导入Mysql模块" class="headerlink" title="导入Mysql模块"></a>导入Mysql模块</h2><p>首先安装mysql模块</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">npm</span> <span class="string">i</span> <span class="string">mysql</span></span><br></pre></td></tr></table></figure>
 <p>然后导入mysql模块</p>
@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <title>SQL语句使用</title>
-    <url>/2022/07/26/sql%E8%AF%AD%E5%8F%A5%E4%BD%BF%E7%94%A8/</url>
+    <url>/Ayer-Myweb/2022/07/26/sql%E8%AF%AD%E5%8F%A5%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="SQL的Select语句"><a href="#SQL的Select语句" class="headerlink" title="SQL的Select语句"></a>SQL的Select语句</h2><p>&lt;!&gt;大小写不敏感</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从from指定的[表中],查询出所有数据, * 表示所有列</span></span><br><span class="line"><span class="string">SELECT</span> <span class="string">*</span> <span class="string">FROM</span> <span class="string">表名称</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从from指定的[表中],查询出指定的 列名称 的数据</span></span><br><span class="line"><span class="string">SELECT</span> <span class="string">列名称</span> <span class="string">FROM</span> <span class="string">表名称</span></span><br></pre></td></tr></table></figure>
 
@@ -54,7 +54,7 @@
   </entry>
   <entry>
     <title>Express路由</title>
-    <url>/2022/07/25/Express%E8%B7%AF%E7%94%B1/</url>
+    <url>/Ayer-Myweb/2022/07/25/Express%E8%B7%AF%E7%94%B1/</url>
     <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>在Express中,路由指的是客户端的请求与服务器处理函数之间的映射关系.<br>Express的路由分为三个部分:请求的类型,请求的URL地址,处理函数<br>格式如下:</p>
 <h2 id="路由匹配的注意点"><a href="#路由匹配的注意点" class="headerlink" title="路由匹配的注意点"></a>路由匹配的注意点</h2><p>1.按照定义的先后顺序进行匹配<br>2.请求类型和请求的URL同时匹配成功,才会调用对应的处理函数</p>
 <h2 id="挂在路由的方式"><a href="#挂在路由的方式" class="headerlink" title="挂在路由的方式"></a>挂在路由的方式</h2><p>1.直接挂在到app上</p>
@@ -107,7 +107,7 @@
   </entry>
   <entry>
     <title>渐变轮播图的实现</title>
-    <url>/2022/07/24/%E6%B8%90%E5%8F%98%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
+    <url>/Ayer-Myweb/2022/07/24/%E6%B8%90%E5%8F%98%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><pre><code>需要提前在img数组中,把除去第一个图片中的opacity调整为0,加上transation:all time;
 用前需要定义变量,获取html元素
 direction:方向----left或者right
@@ -126,7 +126,7 @@ group:图片数组
   </entry>
   <entry>
     <title>JavaScript函数封装--上下缓动动画(只支持(滚动动画过渡,不适合左右位移))</title>
-    <url>/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E4%B8%8A%E4%B8%8B%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E5%8F%AA%E6%94%AF%E6%8C%81-%E6%BB%9A%E5%8A%A8%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1-%E4%B8%8D%E9%80%82%E5%90%88%E5%B7%A6%E5%8F%B3%E4%BD%8D%E7%A7%BB/</url>
+    <url>/Ayer-Myweb/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E4%B8%8A%E4%B8%8B%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E5%8F%AA%E6%94%AF%E6%8C%81-%E6%BB%9A%E5%8A%A8%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1-%E4%B8%8D%E9%80%82%E5%90%88%E5%B7%A6%E5%8F%B3%E4%BD%8D%E7%A7%BB/</url>
     <content><![CDATA[<h2 id="函数封装"><a href="#函数封装" class="headerlink" title="函数封装"></a>函数封装</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// obj:盒子对象</span></span><br><span class="line"><span class="comment">// target:目标位置</span></span><br><span class="line"><span class="comment">// time:运动时间</span></span><br><span class="line"><span class="comment">// callback:回调函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">move</span>(<span class="params">obj,target,time,callback</span>)&#123;</span><br><span class="line">				<span class="comment">// 清除定时器,防止多次点击加快移动速度和创建新的定时器</span></span><br><span class="line">				<span class="built_in">clearInterval</span>(obj.<span class="property">timer</span>)</span><br><span class="line">				<span class="comment">// 结束</span></span><br><span class="line">				obj.<span class="property">timer</span> = <span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">					<span class="comment">// 缓动动画原理</span></span><br><span class="line">					<span class="comment">// (目标位置-现在位置)/10</span></span><br><span class="line">					<span class="keyword">var</span> step = (target - <span class="variable language_">window</span>.<span class="property">pageYOffset</span>) / <span class="number">10</span>;</span><br><span class="line">					step  = step &gt; <span class="number">0</span> ?<span class="title class_">Math</span>.<span class="title function_">ceil</span>(step) : <span class="title class_">Math</span>.<span class="title function_">floor</span>(step)</span><br><span class="line">					<span class="comment">// 步行算法结束</span></span><br><span class="line">					<span class="keyword">if</span>(<span class="variable language_">window</span>.<span class="property">pageYOffset</span> == target)&#123;</span><br><span class="line">						<span class="built_in">clearInterval</span>(obj.<span class="property">timer</span>)</span><br><span class="line">						<span class="comment">// 回调函数,如果有就执行,如果没有就不执行</span></span><br><span class="line">						<span class="keyword">if</span>(callback)&#123;</span><br><span class="line">							<span class="title function_">callback</span>()</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="comment">// 回调函数结束</span></span><br><span class="line">					&#125;</span><br><span class="line">					<span class="comment">// obj.style.left = window.pageYOffset + step +&#x27;px&#x27;</span></span><br><span class="line">					<span class="variable language_">window</span>.<span class="title function_">scroll</span>(<span class="number">0</span>,<span class="variable language_">window</span>.<span class="property">pageYOffset</span> + step)</span><br><span class="line">				&#125;,time)</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="函数运用"><a href="#函数运用" class="headerlink" title="函数运用"></a>函数运用</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">move</span>(obj,time,target)</span><br></pre></td></tr></table></figure>
@@ -140,7 +140,7 @@ group:图片数组
   </entry>
   <entry>
     <title>JavaScript函数封装--缓动动画(不支持&#39;回到顶部&#39;的动画的过渡)</title>
-    <url>/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E4%B8%8D%E6%94%AF%E6%8C%81-%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8-%E7%9A%84%E5%8A%A8%E7%94%BB%E7%9A%84%E8%BF%87%E6%B8%A1/</url>
+    <url>/Ayer-Myweb/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E4%B8%8D%E6%94%AF%E6%8C%81-%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8-%E7%9A%84%E5%8A%A8%E7%94%BB%E7%9A%84%E8%BF%87%E6%B8%A1/</url>
     <content><![CDATA[<h2 id="函数封装"><a href="#函数封装" class="headerlink" title="函数封装"></a>函数封装</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="comment">// obj:盒子对象</span></span><br><span class="line"> <span class="comment">// target:目标位置</span></span><br><span class="line"> <span class="comment">// time:运动时间</span></span><br><span class="line"> <span class="comment">// callback:回调函数</span></span><br><span class="line"> <span class="keyword">function</span> <span class="title function_">move</span>(<span class="params">obj,target,time,callback</span>)&#123;</span><br><span class="line">	<span class="comment">// 清除定时器,防止多次点击加快移动速度和创建新的定时器</span></span><br><span class="line">	<span class="built_in">clearInterval</span>(obj.<span class="property">timer</span>)</span><br><span class="line">	<span class="comment">// 结束</span></span><br><span class="line">	obj.<span class="property">timer</span> = <span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="comment">// 缓动动画原理</span></span><br><span class="line">		<span class="comment">// (目标位置-现在位置)/10</span></span><br><span class="line">		<span class="keyword">var</span> step = (target - obj.<span class="property">offsetLeft</span>) / <span class="number">10</span>;</span><br><span class="line">		step  = step &gt; <span class="number">0</span> ?<span class="title class_">Math</span>.<span class="title function_">ceil</span>(step) : <span class="title class_">Math</span>.<span class="title function_">floor</span>(step)</span><br><span class="line">		<span class="comment">// 步行算法结束</span></span><br><span class="line">		<span class="keyword">if</span>(obj.<span class="property">offsetLeft</span> == target)&#123;</span><br><span class="line">			<span class="built_in">clearInterval</span>(obj.<span class="property">timer</span>)</span><br><span class="line">			<span class="comment">// 回调函数,如果有就执行,如果没有就不执行</span></span><br><span class="line">			<span class="keyword">if</span>(callback)&#123;</span><br><span class="line">				<span class="title function_">callback</span>()</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 回调函数结束</span></span><br><span class="line">		&#125;</span><br><span class="line">		obj.<span class="property">style</span>.<span class="property">left</span> = obj.<span class="property">offsetLeft</span> + step +<span class="string">&#x27;px&#x27;</span></span><br><span class="line">	&#125;,time)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="如何使用函数"><a href="#如何使用函数" class="headerlink" title="如何使用函数"></a>如何使用函数</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 中间的px和ms只是告诉你单位,在调用函数的时候不需要添加上去</span></span><br><span class="line"><span class="comment">// 如果函数名出现冲突,可以按照个人喜好修改</span></span><br><span class="line"><span class="comment">// 例如:function animateMove()&#123;&#125;等等</span></span><br><span class="line"><span class="title function_">move</span>(obj,___px,___ms)</span><br></pre></td></tr></table></figure>
@@ -154,7 +154,7 @@ group:图片数组
   </entry>
   <entry>
     <title>es6中不同函数的this指向问题(!)</title>
-    <url>/2022/07/24/es6%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%87%BD%E6%95%B0%E7%9A%84this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</url>
+    <url>/Ayer-Myweb/2022/07/24/es6%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%87%BD%E6%95%B0%E7%9A%84this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h2 id="普通函数"><a href="#普通函数" class="headerlink" title="普通函数"></a>普通函数</h2><pre><code>this指向window
 </code></pre>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1111</span>+<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">fn</span>()</span><br><span class="line">	<span class="comment">// fn(),fn.call()</span></span><br></pre></td></tr></table></figure>
@@ -184,7 +184,7 @@ group:图片数组
   </entry>
   <entry>
     <title>Hexo入门-快速搭建Hexo</title>
-    <url>/2022/07/24/Hexo%E5%85%A5%E9%97%A8-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHexo/</url>
+    <url>/Ayer-Myweb/2022/07/24/Hexo%E5%85%A5%E9%97%A8-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHexo/</url>
     <content><![CDATA[<h2 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h2><p>这个是局部安装</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">npm</span> <span class="string">install</span> <span class="string">hexo</span></span><br></pre></td></tr></table></figure>
 
@@ -211,7 +211,7 @@ group:图片数组
   </entry>
   <entry>
     <title>第一篇文章</title>
-    <url>/2022/07/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <url>/Ayer-Myweb/2022/07/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h2 id="First"><a href="#First" class="headerlink" title="First"></a>First</h2><p>First article</p>
 ]]></content>
   </entry>
