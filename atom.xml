@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>🐱BeiGua&#39;s blogger🐕</title>
   
   
-  <link href="https://www.coder-life.top/Ayer-Myweb/atom.xml" rel="self"/>
+  <link href="https://www.coder-life.top/atom.xml" rel="self"/>
   
-  <link href="https://www.coder-life.top/Ayer-Myweb/"/>
+  <link href="https://www.coder-life.top/"/>
   <updated>2022-07-26T09:27:44.561Z</updated>
-  <id>https://www.coder-life.top/Ayer-Myweb/</id>
+  <id>https://www.coder-life.top/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Node中运用Mysql语句进行增改删查</title>
-    <link href="https://www.coder-life.top/Ayer-Myweb/2022/07/26/Node%E4%B8%AD%E8%BF%90%E7%94%A8Mysql%E8%AF%AD%E5%8F%A5%E8%BF%9B%E8%A1%8C%E5%A2%9E%E6%94%B9%E5%88%A0%E6%9F%A5/"/>
-    <id>https://www.coder-life.top/Ayer-Myweb/2022/07/26/Node%E4%B8%AD%E8%BF%90%E7%94%A8Mysql%E8%AF%AD%E5%8F%A5%E8%BF%9B%E8%A1%8C%E5%A2%9E%E6%94%B9%E5%88%A0%E6%9F%A5/</id>
+    <link href="https://www.coder-life.top/2022/07/26/Node%E4%B8%AD%E8%BF%90%E7%94%A8Mysql%E8%AF%AD%E5%8F%A5%E8%BF%9B%E8%A1%8C%E5%A2%9E%E6%94%B9%E5%88%A0%E6%9F%A5/"/>
+    <id>https://www.coder-life.top/2022/07/26/Node%E4%B8%AD%E8%BF%90%E7%94%A8Mysql%E8%AF%AD%E5%8F%A5%E8%BF%9B%E8%A1%8C%E5%A2%9E%E6%94%B9%E5%88%A0%E6%9F%A5/</id>
     <published>2022-07-26T09:24:04.000Z</published>
     <updated>2022-07-26T09:27:44.561Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="Node.js" scheme="https://www.coder-life.top/Ayer-Myweb/categories/Node-js/"/>
+    <category term="Node.js" scheme="https://www.coder-life.top/categories/Node-js/"/>
     
     
-    <category term="Node.js" scheme="https://www.coder-life.top/Ayer-Myweb/tags/Node-js/"/>
+    <category term="Node.js" scheme="https://www.coder-life.top/tags/Node-js/"/>
     
   </entry>
   
   <entry>
     <title>SQL语句使用</title>
-    <link href="https://www.coder-life.top/Ayer-Myweb/2022/07/26/sql%E8%AF%AD%E5%8F%A5%E4%BD%BF%E7%94%A8/"/>
-    <id>https://www.coder-life.top/Ayer-Myweb/2022/07/26/sql%E8%AF%AD%E5%8F%A5%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://www.coder-life.top/2022/07/26/sql%E8%AF%AD%E5%8F%A5%E4%BD%BF%E7%94%A8/"/>
+    <id>https://www.coder-life.top/2022/07/26/sql%E8%AF%AD%E5%8F%A5%E4%BD%BF%E7%94%A8/</id>
     <published>2022-07-26T08:00:00.000Z</published>
     <updated>2022-07-26T08:39:38.255Z</updated>
     
@@ -60,14 +60,14 @@
     
     
     
-    <category term="Mysql" scheme="https://www.coder-life.top/Ayer-Myweb/tags/Mysql/"/>
+    <category term="Mysql" scheme="https://www.coder-life.top/tags/Mysql/"/>
     
   </entry>
   
   <entry>
     <title>Express路由</title>
-    <link href="https://www.coder-life.top/Ayer-Myweb/2022/07/25/Express%E8%B7%AF%E7%94%B1/"/>
-    <id>https://www.coder-life.top/Ayer-Myweb/2022/07/25/Express%E8%B7%AF%E7%94%B1/</id>
+    <link href="https://www.coder-life.top/2022/07/25/Express%E8%B7%AF%E7%94%B1/"/>
+    <id>https://www.coder-life.top/2022/07/25/Express%E8%B7%AF%E7%94%B1/</id>
     <published>2022-07-25T04:24:00.000Z</published>
     <updated>2022-07-25T08:21:58.468Z</updated>
     
@@ -81,17 +81,17 @@
     
     
     
-    <category term="Node.js" scheme="https://www.coder-life.top/Ayer-Myweb/categories/Node-js/"/>
+    <category term="Node.js" scheme="https://www.coder-life.top/categories/Node-js/"/>
     
     
-    <category term="Node.js" scheme="https://www.coder-life.top/Ayer-Myweb/tags/Node-js/"/>
+    <category term="Node.js" scheme="https://www.coder-life.top/tags/Node-js/"/>
     
   </entry>
   
   <entry>
     <title>渐变轮播图的实现</title>
-    <link href="https://www.coder-life.top/Ayer-Myweb/2022/07/24/%E6%B8%90%E5%8F%98%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
-    <id>https://www.coder-life.top/Ayer-Myweb/2022/07/24/%E6%B8%90%E5%8F%98%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0/</id>
+    <link href="https://www.coder-life.top/2022/07/24/%E6%B8%90%E5%8F%98%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://www.coder-life.top/2022/07/24/%E6%B8%90%E5%8F%98%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0/</id>
     <published>2022-07-24T09:22:18.000Z</published>
     <updated>2022-07-24T09:27:14.930Z</updated>
     
@@ -105,17 +105,17 @@
     
     
     
-    <category term="JavaScript" scheme="https://www.coder-life.top/Ayer-Myweb/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.coder-life.top/categories/JavaScript/"/>
     
     
-    <category term="JavaScript" scheme="https://www.coder-life.top/Ayer-Myweb/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.coder-life.top/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript函数封装--上下缓动动画(只支持(滚动动画过渡,不适合左右位移))</title>
-    <link href="https://www.coder-life.top/Ayer-Myweb/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E4%B8%8A%E4%B8%8B%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E5%8F%AA%E6%94%AF%E6%8C%81-%E6%BB%9A%E5%8A%A8%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1-%E4%B8%8D%E9%80%82%E5%90%88%E5%B7%A6%E5%8F%B3%E4%BD%8D%E7%A7%BB/"/>
-    <id>https://www.coder-life.top/Ayer-Myweb/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E4%B8%8A%E4%B8%8B%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E5%8F%AA%E6%94%AF%E6%8C%81-%E6%BB%9A%E5%8A%A8%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1-%E4%B8%8D%E9%80%82%E5%90%88%E5%B7%A6%E5%8F%B3%E4%BD%8D%E7%A7%BB/</id>
+    <link href="https://www.coder-life.top/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E4%B8%8A%E4%B8%8B%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E5%8F%AA%E6%94%AF%E6%8C%81-%E6%BB%9A%E5%8A%A8%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1-%E4%B8%8D%E9%80%82%E5%90%88%E5%B7%A6%E5%8F%B3%E4%BD%8D%E7%A7%BB/"/>
+    <id>https://www.coder-life.top/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E4%B8%8A%E4%B8%8B%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E5%8F%AA%E6%94%AF%E6%8C%81-%E6%BB%9A%E5%8A%A8%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1-%E4%B8%8D%E9%80%82%E5%90%88%E5%B7%A6%E5%8F%B3%E4%BD%8D%E7%A7%BB/</id>
     <published>2022-07-24T09:07:43.000Z</published>
     <updated>2022-07-24T09:17:10.133Z</updated>
     
@@ -129,17 +129,17 @@
     
     
     
-    <category term="JavaScript" scheme="https://www.coder-life.top/Ayer-Myweb/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.coder-life.top/categories/JavaScript/"/>
     
     
-    <category term="JavaScript" scheme="https://www.coder-life.top/Ayer-Myweb/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.coder-life.top/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript函数封装--缓动动画(不支持&#39;回到顶部&#39;的动画的过渡)</title>
-    <link href="https://www.coder-life.top/Ayer-Myweb/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E4%B8%8D%E6%94%AF%E6%8C%81-%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8-%E7%9A%84%E5%8A%A8%E7%94%BB%E7%9A%84%E8%BF%87%E6%B8%A1/"/>
-    <id>https://www.coder-life.top/Ayer-Myweb/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E4%B8%8D%E6%94%AF%E6%8C%81-%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8-%E7%9A%84%E5%8A%A8%E7%94%BB%E7%9A%84%E8%BF%87%E6%B8%A1/</id>
+    <link href="https://www.coder-life.top/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E4%B8%8D%E6%94%AF%E6%8C%81-%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8-%E7%9A%84%E5%8A%A8%E7%94%BB%E7%9A%84%E8%BF%87%E6%B8%A1/"/>
+    <id>https://www.coder-life.top/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E4%B8%8D%E6%94%AF%E6%8C%81-%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8-%E7%9A%84%E5%8A%A8%E7%94%BB%E7%9A%84%E8%BF%87%E6%B8%A1/</id>
     <published>2022-07-24T09:03:18.000Z</published>
     <updated>2022-07-24T09:17:01.462Z</updated>
     
@@ -153,17 +153,17 @@
     
     
     
-    <category term="JavaScript" scheme="https://www.coder-life.top/Ayer-Myweb/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.coder-life.top/categories/JavaScript/"/>
     
     
-    <category term="JavaScript" scheme="https://www.coder-life.top/Ayer-Myweb/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.coder-life.top/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>es6中不同函数的this指向问题(!)</title>
-    <link href="https://www.coder-life.top/Ayer-Myweb/2022/07/24/es6%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%87%BD%E6%95%B0%E7%9A%84this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/"/>
-    <id>https://www.coder-life.top/Ayer-Myweb/2022/07/24/es6%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%87%BD%E6%95%B0%E7%9A%84this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</id>
+    <link href="https://www.coder-life.top/2022/07/24/es6%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%87%BD%E6%95%B0%E7%9A%84this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/"/>
+    <id>https://www.coder-life.top/2022/07/24/es6%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%87%BD%E6%95%B0%E7%9A%84this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</id>
     <published>2022-07-24T08:52:28.000Z</published>
     <updated>2022-07-24T09:00:46.656Z</updated>
     
@@ -180,14 +180,14 @@
     
     
     
-    <category term="JavaScript,es6" scheme="https://www.coder-life.top/Ayer-Myweb/tags/JavaScript-es6/"/>
+    <category term="JavaScript,es6" scheme="https://www.coder-life.top/tags/JavaScript-es6/"/>
     
   </entry>
   
   <entry>
     <title>Hexo入门-快速搭建Hexo</title>
-    <link href="https://www.coder-life.top/Ayer-Myweb/2022/07/24/Hexo%E5%85%A5%E9%97%A8-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHexo/"/>
-    <id>https://www.coder-life.top/Ayer-Myweb/2022/07/24/Hexo%E5%85%A5%E9%97%A8-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHexo/</id>
+    <link href="https://www.coder-life.top/2022/07/24/Hexo%E5%85%A5%E9%97%A8-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHexo/"/>
+    <id>https://www.coder-life.top/2022/07/24/Hexo%E5%85%A5%E9%97%A8-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHexo/</id>
     <published>2022-07-24T08:34:47.000Z</published>
     <updated>2022-07-24T09:16:44.758Z</updated>
     
@@ -202,17 +202,17 @@
     
     
     
-    <category term="框架" scheme="https://www.coder-life.top/Ayer-Myweb/categories/%E6%A1%86%E6%9E%B6/"/>
+    <category term="框架" scheme="https://www.coder-life.top/categories/%E6%A1%86%E6%9E%B6/"/>
     
     
-    <category term="框架安装" scheme="https://www.coder-life.top/Ayer-Myweb/tags/%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/"/>
+    <category term="框架安装" scheme="https://www.coder-life.top/tags/%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
   <entry>
     <title>第一篇文章</title>
-    <link href="https://www.coder-life.top/Ayer-Myweb/2022/07/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>https://www.coder-life.top/Ayer-Myweb/2022/07/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
+    <link href="https://www.coder-life.top/2022/07/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>https://www.coder-life.top/2022/07/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
     <published>2022-07-24T08:13:30.000Z</published>
     <updated>2022-07-24T08:13:50.537Z</updated>
     
