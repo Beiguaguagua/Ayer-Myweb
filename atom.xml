@@ -6,7 +6,7 @@
   <link href="https://www.coder-life.top/atom.xml" rel="self"/>
   
   <link href="https://www.coder-life.top/"/>
-  <updated>2022-07-26T09:27:44.561Z</updated>
+  <updated>2022-07-28T05:29:56.858Z</updated>
   <id>https://www.coder-life.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Node.js的大事件项目(后续补坑)</title>
+    <link href="https://www.coder-life.top/2022/07/28/Node-js%E7%9A%84%E5%A4%A7%E4%BA%8B%E4%BB%B6%E9%A1%B9%E7%9B%AE-%E5%90%8E%E7%BB%AD%E8%A1%A5%E5%9D%91/"/>
+    <id>https://www.coder-life.top/2022/07/28/Node-js%E7%9A%84%E5%A4%A7%E4%BA%8B%E4%BB%B6%E9%A1%B9%E7%9B%AE-%E5%90%8E%E7%BB%AD%E8%A1%A5%E5%9D%91/</id>
+    <published>2022-07-28T05:28:14.000Z</published>
+    <updated>2022-07-28T05:29:56.858Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><p>&lt;!&gt;大事件项目属于是Vue教程里的,所以选完Vue再回来继续补Node.js<br>&lt;!&gt;CSS和BOM的移动端操作还没有学,后续补坑</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;记录&quot;&gt;&lt;a href=&quot;#记录&quot; class=&quot;headerlink&quot; title=&quot;记录&quot;&gt;&lt;/a&gt;记录&lt;/h2&gt;&lt;p&gt;&amp;lt;!&amp;gt;大事件项目属于是Vue教程里的,所以选完Vue再回来继续补Node.js&lt;br&gt;&amp;lt;!&amp;gt;CSS和BOM的移动端操</summary>
+      
+    
+    
+    
+    
+    <category term="Node.js" scheme="https://www.coder-life.top/tags/Node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>Node中运用Mysql语句进行增改删查</title>
@@ -61,6 +83,28 @@
     
     
     <category term="Mysql" scheme="https://www.coder-life.top/tags/Mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>web开发模式</title>
+    <link href="https://www.coder-life.top/2022/07/26/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81/"/>
+    <id>https://www.coder-life.top/2022/07/26/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81/</id>
+    <published>2022-07-26T08:00:00.000Z</published>
+    <updated>2022-07-27T16:56:13.755Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="服务器端渲染"><a href="#服务器端渲染" class="headerlink" title="服务器端渲染"></a>服务器端渲染</h2><p>概念:服务器发送给客户端的HTML页面,是在服务器通过字符串的拼接,动态生成的,所以不需要Ajax来进行额外请求</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h2 id="前后端分离的开发模式"><a href="#前后端分离的开发模式" class="headerlink" title="前后端分离的开发模式"></a>前后端分离的开发模式</h2><p>概念:依赖于Ajax技术,后端负责提供API接口,前端使用Ajax调用接口的开发模式<br>优点:1.开发体验好,前端专注于UI,后端专注于API;<br>    2.用户体验好;<br>    3.减轻了服务器端的压力.<br>缺点:1.不利于SEO(搜索引擎优化).</p><h2 id="如何选择何种开发模式"><a href="#如何选择何种开发模式" class="headerlink" title="如何选择何种开发模式"></a>如何选择何种开发模式</h2><p>1.功能主要是展示,没有复杂的交互,并且需要良好的SEO,就用服务器端渲染</p><p>2.类似于后台管理项目,交互性比较强,不需要考虑SEO,就用前后端分离的开发模式</p><p>3.混合开发:首屏服务器端渲染(兼顾首屏的渲染速度),分页是前后端分离的开发模式</p><h2 id="身份认证"><a href="#身份认证" class="headerlink" title="身份认证"></a>身份认证</h2><p>对于服务器端渲染—–推荐使用!&lt;Session认证机制&gt;</p><p>对于前后端分离—–推荐使用!&lt;JWT认证机制&gt;</p><h2 id="Seesion"><a href="#Seesion" class="headerlink" title="Seesion"></a>Seesion</h2><p>1.HTTP协议的无状态性</p><pre><code>指的是:客户端的每次HTTP请求都是独立的,连续多个请求之间没有直接的关系,服务器不会主动保留每次HTTP请求的状态</code></pre><p>2.Cookie(键值对)</p><pre><code>指的是:存储在用户浏览器中的一段不超过4KB的字符串特性:1.自动发送;    2.域名独立;    3.过期时限;    4.4KB限制;&lt;!&gt;Cookie很容易被伪造,不具有安全性</code></pre><p>3.Session认证机制</p><pre><code>设计理念类似于:会员卡＋刷卡认证</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;服务器端渲染&quot;&gt;&lt;a href=&quot;#服务器端渲染&quot; class=&quot;headerlink&quot; title=&quot;服务器端渲染&quot;&gt;&lt;/a&gt;服务器端渲染&lt;/h2&gt;&lt;p&gt;概念:服务器发送给客户端的HTML页面,是在服务器通过字符串的拼接,动态生成的,所以不需要Ajax来进行额外</summary>
+      
+    
+    
+    
+    
+    <category term="Node.js" scheme="https://www.coder-life.top/tags/Node-js/"/>
     
   </entry>
   
