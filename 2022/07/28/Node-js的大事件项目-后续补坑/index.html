@@ -81,7 +81,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">47</span>
+            <span class="post-count">381</span>
         </span>
     </span>
 
@@ -105,7 +105,21 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><p>&lt;!&gt;大事件项目属于是Vue教程里的,所以选完Vue再回来继续补Node.js<br>&lt;!&gt;CSS和BOM的移动端操作还没有学,后续补坑</p>
+  <h1 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h1><p>&lt;!&gt;大事件项目属于是Vue教程里的,所以选完Vue再回来继续补Node.js<br>&lt;!&gt;CSS和BOM的移动端操作还没有学,后续补坑</p>
+<h2 id="Node-js中大事件项目的补坑-更新事件-2022-x2F-7-x2F-29-16-35"><a href="#Node-js中大事件项目的补坑-更新事件-2022-x2F-7-x2F-29-16-35" class="headerlink" title="Node.js中大事件项目的补坑(更新事件:2022&#x2F;7&#x2F;29 16:35)"></a>Node.js中大事件项目的补坑(更新事件:2022&#x2F;7&#x2F;29 16:35)</h2><h3 id="文件类别分为-router-rouer-handler-db-Schema-app-js"><a href="#文件类别分为-router-rouer-handler-db-Schema-app-js" class="headerlink" title="文件类别分为:router;rouer_handler;db;Schema;app.js"></a>文件类别分为:<em>router</em>;<em>rouer_handler</em>;<em>db</em>;<em>Schema</em>;<em>app.js</em></h3><h4 id="文件分类的解释"><a href="#文件分类的解释" class="headerlink" title="文件分类的解释"></a>文件分类的解释</h4><ul>
+<li><p>router:我理解的意思是接口分类,以及调用其他文件夹的处理函数,比如说总端的网址是’<a href="http://127.0.0.1:80&#39;,如果我向修改密码的话,那么router会将你分配到修改密码的路由中,然后这个路由调用其他路由的函数方法进行操作">http://127.0.0.1:80&#39;,如果我向修改密码的话,那么router会将你分配到修改密码的路由中,然后这个路由调用其他路由的函数方法进行操作</a>.</p>
+</li>
+<li><p>router_handler:意思就是对你在router里面进行的操作进行分析,并利用里面的函数方法给你进行处理.</p>
+</li>
+<li><p>db:数据库的包,需要自行创建.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mysql = <span class="built_in">require</span>(<span class="string">&#x27;mysql&#x27;</span>)</span><br><span class="line"><span class="comment">// 创建数据库连接对象</span></span><br><span class="line"><span class="keyword">const</span> db = mysql.<span class="title function_">createPool</span>(&#123;</span><br><span class="line">    <span class="attr">host</span>:<span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">    <span class="attr">user</span>:<span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">password</span>:<span class="string">&#x27;123456&#x27;</span>,</span><br><span class="line">    <span class="attr">database</span>:<span class="string">&#x27;my_db_01&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = db</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Schema:它用于指定规则的,比如你的密码多少位,包含大小写或者英文之类的,再比如你的邮箱格式是否符合<a href="mailto:&#120;&#x78;&#x78;&#x40;&#x78;&#x78;&#120;&#46;&#x63;&#111;&#109;">&#120;&#x78;&#x78;&#x40;&#x78;&#x78;&#120;&#46;&#x63;&#111;&#109;</a>,必需包是<em>joi</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入包</span></span><br><span class="line"><span class="keyword">const</span> joi = <span class="built_in">require</span>(<span class="string">&#x27;joi&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>app.js:它属于是一个总端吧,如果你进行修改密码的操作,那么它会将你分配到修改密码的路由中去操作.</p>
+</li>
+</ul>
  
       <!-- reward -->
       
