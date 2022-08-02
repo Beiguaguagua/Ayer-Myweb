@@ -6,7 +6,9 @@
 
     <head>
       <meta charset="utf-8" />
-        
+       
+      <meta name="keywords" content="blog" />
+       
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
@@ -126,12 +128,6 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除数据</span></span><br><span class="line"><span class="keyword">const</span> sqlStrOne = <span class="string">&#x27;delete from users where id=?&#x27;</span></span><br><span class="line">db.<span class="title function_">query</span>(sqlStrOne,<span class="number">1</span>,<span class="function">(<span class="params">err,results</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(err)&#123;<span class="keyword">return</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;出现问题---&gt;\n&#x27;</span>+err.<span class="property">message</span>)&#125;</span><br><span class="line">    <span class="keyword">if</span>(results.<span class="property">affectedRows</span> === <span class="number">1</span>)&#123;</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;删除成功&#x27;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 标记删除</span></span><br><span class="line"><span class="keyword">const</span> sqlStrTwo = <span class="string">&#x27;update users set status=1 where id=?&#x27;</span></span><br><span class="line">db.<span class="title function_">query</span>(sqlStrTwo,<span class="number">3</span>,<span class="function">(<span class="params">err,results</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(err)&#123;<span class="keyword">return</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;出现问题---&gt;\n&#x27;</span>+err.<span class="property">message</span>)&#125;</span><br><span class="line">    <span class="keyword">if</span>(results.<span class="property">affectedRows</span> === <span class="number">1</span>)&#123;</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;标记删除成功&#x27;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
-      <div id="reword-out">
-        <div id="reward-btn">
-          Donate
-        </div>
-      </div>
-      
     </div>
     
 
@@ -244,7 +240,7 @@
       <li>
         Copyrights &copy;
         2022
-        <i class="ri-heart-fill heart_icon"></i> John Doe
+        <i class="ri-heart-fill heart_icon"></i> BieGua
       </li>
     </ul>
     <ul>
