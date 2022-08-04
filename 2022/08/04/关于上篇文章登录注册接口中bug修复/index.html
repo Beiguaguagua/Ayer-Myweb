@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Node.js的大事件项目(后续补坑) |  🐱BeiGua&#39;s blogger🐕</title>
+      <title>关于上篇文章登录注册接口中bug修复 |  🐱BeiGua&#39;s blogger🐕</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,7 +56,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Node-js的大事件项目-后续补坑"
+  id="post-关于上篇文章登录注册接口中bug修复"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -67,7 +67,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Node.js的大事件项目(后续补坑)
+  关于上篇文章登录注册接口中bug修复
 </h1>
  
 
@@ -75,15 +75,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/07/28/Node-js%E7%9A%84%E5%A4%A7%E4%BA%8B%E4%BB%B6%E9%A1%B9%E7%9B%AE-%E5%90%8E%E7%BB%AD%E8%A1%A5%E5%9D%91/" class="article-date">
-  <time datetime="2022-07-28T05:28:14.000Z" itemprop="datePublished">2022-07-28</time>
+      <a href="/2022/08/04/%E5%85%B3%E4%BA%8E%E4%B8%8A%E7%AF%87%E6%96%87%E7%AB%A0%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%E4%B8%ADbug%E4%BF%AE%E5%A4%8D/" class="article-date">
+  <time datetime="2022-08-04T06:34:50.000Z" itemprop="datePublished">2022-08-04</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">381</span>
+            <span class="post-count">513</span>
         </span>
     </span>
 
@@ -92,7 +92,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -107,20 +107,16 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h1><p>&lt;!&gt;大事件项目属于是Vue教程里的,所以选完Vue再回来继续补Node.js<br>&lt;!&gt;CSS和BOM的移动端操作还没有学,后续补坑</p>
-<h2 id="Node-js中大事件项目的补坑-更新事件-2022-x2F-7-x2F-29-16-35"><a href="#Node-js中大事件项目的补坑-更新事件-2022-x2F-7-x2F-29-16-35" class="headerlink" title="Node.js中大事件项目的补坑(更新事件:2022&#x2F;7&#x2F;29 16:35)"></a>Node.js中大事件项目的补坑(更新事件:2022&#x2F;7&#x2F;29 16:35)</h2><h3 id="文件类别分为-router-rouer-handler-db-Schema-app-js"><a href="#文件类别分为-router-rouer-handler-db-Schema-app-js" class="headerlink" title="文件类别分为:router;rouer_handler;db;Schema;app.js"></a>文件类别分为:<em>router</em>;<em>rouer_handler</em>;<em>db</em>;<em>Schema</em>;<em>app.js</em></h3><h4 id="文件分类的解释"><a href="#文件分类的解释" class="headerlink" title="文件分类的解释"></a>文件分类的解释</h4><ul>
-<li><p>router:我理解的意思是接口分类,以及调用其他文件夹的处理函数,比如说总端的网址是’<a href="http://127.0.0.1:80&#39;,如果我向修改密码的话,那么router会将你分配到修改密码的路由中,然后这个路由调用其他路由的函数方法进行操作">http://127.0.0.1:80&#39;,如果我向修改密码的话,那么router会将你分配到修改密码的路由中,然后这个路由调用其他路由的函数方法进行操作</a>.</p>
+  <h2 id="BUG描述"><a href="#BUG描述" class="headerlink" title="BUG描述"></a>BUG描述</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Cannot</span> <span class="string">set</span> <span class="string">headers</span> <span class="string">after</span> <span class="string">they</span> <span class="string">are</span> <span class="string">sent</span> <span class="string">to</span> <span class="string">the</span> <span class="string">client</span></span><br><span class="line"><span class="string">翻译过来就是:发送到客户端后无法设置标头</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="发送这个bug的原因"><a href="#发送这个bug的原因" class="headerlink" title="发送这个bug的原因"></a>发送这个bug的原因</h2><p>原因:在上个博客中app.js中的res.cc和router_handler的user.js中的regUser模块的判定用户名是否被占用中的res.cc发生冲突,因为在执行完判定后,它自动去执行了加入数据库那堆代码中的res.cc(err),相当于执行了两次.客户端发送一次请求,服务器给出了两次反映</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>思路:给判定用户名中再添加一个if语句来判定,如果没被占用就执行insert操作,如果被占用,就直接返回错误信息</p>
+<ul>
+<li><p>原代码:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.<span class="property">regUser</span> = <span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> userinfo = req.<span class="property">body</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> sql = <span class="string">&#x27;select * from ev_users where username=?&#x27;</span></span><br><span class="line">    db.<span class="title function_">query</span>(sql,userinfo.<span class="property">username</span>,<span class="function">(<span class="params">err,results</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(err) <span class="keyword">return</span> res.<span class="title function_">cc</span>(err)</span><br><span class="line">        <span class="keyword">if</span>(results.<span class="property">length</span>&gt;<span class="number">0</span>) <span class="keyword">return</span> res.<span class="title function_">cc</span>(<span class="string">&#x27;用户名已经被占用&#x27;</span>)</span><br><span class="line">        <span class="comment">// console.log(results.length),如果为1,说明已经有该用户,如果为0,说明没有该用户,可以用于注册</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 加密密码</span></span><br><span class="line">        userinfo.<span class="property">password</span> = bcyptjs.<span class="title function_">hashSync</span>(userinfo.<span class="property">password</span>,<span class="number">10</span>)</span><br><span class="line">    <span class="comment">// 执行sql</span></span><br><span class="line">        <span class="keyword">const</span> sqlStr = <span class="string">&#x27;insert into ev_users set ?&#x27;</span></span><br><span class="line">        db.<span class="title function_">query</span>(sqlStr,&#123;<span class="attr">username</span>:userinfo.<span class="property">username</span>,<span class="attr">password</span>:userinfo.<span class="property">password</span>&#125;,<span class="function">(<span class="params">err,results</span>)=&gt;</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(err) <span class="keyword">return</span> res.<span class="title function_">cc</span>(err)</span><br><span class="line">            <span class="keyword">if</span>(results.<span class="property">affectedRows</span> !== <span class="number">1</span>) <span class="keyword">return</span> res.<span class="title function_">cc</span>(<span class="string">&#x27;注册用户失败&#x27;</span>,<span class="number">1</span>)</span><br><span class="line">            res.<span class="title function_">cc</span>(<span class="string">&#x27;注册成功&#x27;</span>,<span class="number">0</span>)</span><br><span class="line">        &#125;)  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>router_handler:意思就是对你在router里面进行的操作进行分析,并利用里面的函数方法给你进行处理.</p>
-<span id="more"></span></li>
-<li><p>db:数据库的包,需要自行创建.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mysql = <span class="built_in">require</span>(<span class="string">&#x27;mysql&#x27;</span>)</span><br><span class="line"><span class="comment">// 创建数据库连接对象</span></span><br><span class="line"><span class="keyword">const</span> db = mysql.<span class="title function_">createPool</span>(&#123;</span><br><span class="line">    <span class="attr">host</span>:<span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">    <span class="attr">user</span>:<span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">password</span>:<span class="string">&#x27;123456&#x27;</span>,</span><br><span class="line">    <span class="attr">database</span>:<span class="string">&#x27;my_db_01&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = db</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Schema:它用于指定规则的,比如你的密码多少位,包含大小写或者英文之类的,再比如你的邮箱格式是否符合<a href="mailto:&#x78;&#120;&#x78;&#x40;&#120;&#120;&#120;&#x2e;&#99;&#x6f;&#x6d;">&#x78;&#120;&#x78;&#x40;&#120;&#120;&#120;&#x2e;&#99;&#x6f;&#x6d;</a>,必需包是<em>joi</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入包</span></span><br><span class="line"><span class="keyword">const</span> joi = <span class="built_in">require</span>(<span class="string">&#x27;joi&#x27;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>app.js:它属于是一个总端吧,如果你进行修改密码的操作,那么它会将你分配到修改密码的路由中去操作.</p>
-</li>
+<li><p>修改后的代码:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.<span class="property">regUser</span> = <span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> userinfo = req.<span class="property">body</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> sql = <span class="string">&#x27;select * from ev_users where username=?&#x27;</span></span><br><span class="line">    db.<span class="title function_">query</span>(sql,userinfo.<span class="property">username</span>,<span class="function">(<span class="params">err,results</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(err) <span class="keyword">return</span> res.<span class="title function_">cc</span>(err)</span><br><span class="line">        <span class="keyword">if</span>(results.<span class="property">length</span>&gt;<span class="number">0</span>) <span class="keyword">return</span> res.<span class="title function_">cc</span>(<span class="string">&#x27;用户名已经被占用&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span>(results.<span class="property">length</span> != <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="comment">// 加密密码</span></span><br><span class="line">        userinfo.<span class="property">password</span> = bcyptjs.<span class="title function_">hashSync</span>(userinfo.<span class="property">password</span>,<span class="number">10</span>)</span><br><span class="line">        <span class="comment">// 执行sql</span></span><br><span class="line">            <span class="keyword">const</span> sqlStr = <span class="string">&#x27;insert into ev_users set ?&#x27;</span></span><br><span class="line">            db.<span class="title function_">query</span>(sqlStr,&#123;<span class="attr">username</span>:userinfo.<span class="property">username</span>,<span class="attr">password</span>:userinfo.<span class="property">password</span>&#125;,<span class="function">(<span class="params">err,results</span>)=&gt;</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(err) <span class="keyword">return</span> res.<span class="title function_">cc</span>(err)</span><br><span class="line">                <span class="keyword">if</span>(results.<span class="property">affectedRows</span> !== <span class="number">1</span>) <span class="keyword">return</span> res.<span class="title function_">cc</span>(<span class="string">&#x27;注册用户失败&#x27;</span>,<span class="number">1</span>)</span><br><span class="line">                res.<span class="title function_">send</span>(&#123;</span><br><span class="line">                    <span class="attr">status</span>:<span class="number">0</span>,</span><br><span class="line">                    <span class="attr">msg</span>:<span class="string">&#x27;注册成功&#x27;</span>,</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;)  </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// console.log(results.length),如果为1,说明已经有该用户,如果为0,说明没有该用户,可以用于注册</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
  
       <!-- reward -->
@@ -186,7 +182,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.coder-life.top/2022/07/28/Node-js%E7%9A%84%E5%A4%A7%E4%BA%8B%E4%BB%B6%E9%A1%B9%E7%9B%AE-%E5%90%8E%E7%BB%AD%E8%A1%A5%E5%9D%91/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.coder-life.top/2022/08/04/%E5%85%B3%E4%BA%8E%E4%B8%8A%E7%AF%87%E6%96%87%E7%AB%A0%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3%E4%B8%ADbug%E4%BF%AE%E5%A4%8D/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -199,19 +195,10 @@
    
   <nav class="article-nav">
     
+    
       <a href="/2022/08/02/%E5%85%B3%E4%BA%8Enode.js%E4%B9%A6%E5%86%99%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            关于node.js书写登录注册接口
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2022/07/26/Node%E4%B8%AD%E8%BF%90%E7%94%A8Mysql%E8%AF%AD%E5%8F%A5%E8%BF%9B%E8%A1%8C%E5%A2%9E%E6%94%B9%E5%88%A0%E6%9F%A5/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Node中运用Mysql语句进行增改删查</div>
+        <div class="article-nav-title">关于node.js书写登录注册接口</div>
       </a>
     
   </nav>
