@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Node.js的大事件项目(后续补坑) |  🐱BeiGua&#39;s blogger🐕</title>
+      <title>Tag: Vue |  🐱BeiGua&#39;s blogger🐕</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -55,181 +55,56 @@
       
     <main class="content on">
       <section class="outer">
-  <article
-  id="post-Node-js的大事件项目-后续补坑"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
+  
+  
+  <article class="articles">
     
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Node.js的大事件项目(后续补坑)
-</h1>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/07/28/Node-js%E7%9A%84%E5%A4%A7%E4%BA%8B%E4%BB%B6%E9%A1%B9%E7%9B%AE-%E5%90%8E%E7%BB%AD%E8%A1%A5%E5%9D%91/" class="article-date">
-  <time datetime="2022-07-28T05:28:14.000Z" itemprop="datePublished">2022-07-28</time>
-</a>   
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">381</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
-        </span>
-    </span>
-</div>
- 
+    
+    <h1 class="page-type-title">#&nbspVue</h1>
+    
+    
+  
+  
+  
+  
+  
+  
+  <div class="archives-wrap">
+    <div class="archive-year-wrap">
+      <a href="/archives/2022" class="archive-year">2022</a>
     </div>
+    <div class="archives">
       
-    <div class="tocbot"></div>
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2022/08/10/Vue%E5%85%A5%E9%97%A8%E4%B9%8B%E6%8C%87%E4%BB%A4/" class="archive-article-date">
+  <time datetime="2022-08-10T09:29:36.000Z" itemprop="datePublished">08/10</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/2022/08/10/Vue%E5%85%A5%E9%97%A8%E4%B9%8B%E6%8C%87%E4%BB%A4/"
+    >Vue的指令</a> 
+</h2>
+ 
 
+    </header>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
 
-
+    
+  </div>
+</article>
+      
+      
+    </div>
+  </div>
+  
+  
 
   
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h1><p>&lt;!&gt;大事件项目属于是Vue教程里的,所以选完Vue再回来继续补Node.js<br>&lt;!&gt;CSS和BOM的移动端操作还没有学,后续补坑</p>
-<h2 id="Node-js中大事件项目的补坑-更新事件-2022-x2F-7-x2F-29-16-35"><a href="#Node-js中大事件项目的补坑-更新事件-2022-x2F-7-x2F-29-16-35" class="headerlink" title="Node.js中大事件项目的补坑(更新事件:2022&#x2F;7&#x2F;29 16:35)"></a>Node.js中大事件项目的补坑(更新事件:2022&#x2F;7&#x2F;29 16:35)</h2><h3 id="文件类别分为-router-rouer-handler-db-Schema-app-js"><a href="#文件类别分为-router-rouer-handler-db-Schema-app-js" class="headerlink" title="文件类别分为:router;rouer_handler;db;Schema;app.js"></a>文件类别分为:<em>router</em>;<em>rouer_handler</em>;<em>db</em>;<em>Schema</em>;<em>app.js</em></h3><h4 id="文件分类的解释"><a href="#文件分类的解释" class="headerlink" title="文件分类的解释"></a>文件分类的解释</h4><ul>
-<li><p>router:我理解的意思是接口分类,以及调用其他文件夹的处理函数,比如说总端的网址是’<a href="http://127.0.0.1:80&#39;,如果我向修改密码的话,那么router会将你分配到修改密码的路由中,然后这个路由调用其他路由的函数方法进行操作">http://127.0.0.1:80&#39;,如果我向修改密码的话,那么router会将你分配到修改密码的路由中,然后这个路由调用其他路由的函数方法进行操作</a>.</p>
-</li>
-<li><p>router_handler:意思就是对你在router里面进行的操作进行分析,并利用里面的函数方法给你进行处理.</p>
-<span id="more"></span></li>
-<li><p>db:数据库的包,需要自行创建.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mysql = <span class="built_in">require</span>(<span class="string">&#x27;mysql&#x27;</span>)</span><br><span class="line"><span class="comment">// 创建数据库连接对象</span></span><br><span class="line"><span class="keyword">const</span> db = mysql.<span class="title function_">createPool</span>(&#123;</span><br><span class="line">    <span class="attr">host</span>:<span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">    <span class="attr">user</span>:<span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">password</span>:<span class="string">&#x27;123456&#x27;</span>,</span><br><span class="line">    <span class="attr">database</span>:<span class="string">&#x27;my_db_01&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = db</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Schema:它用于指定规则的,比如你的密码多少位,包含大小写或者英文之类的,再比如你的邮箱格式是否符合<a href="mailto:&#x78;&#120;&#120;&#64;&#120;&#120;&#x78;&#x2e;&#99;&#x6f;&#x6d;">&#x78;&#120;&#120;&#64;&#120;&#120;&#x78;&#x2e;&#99;&#x6f;&#x6d;</a>,必需包是<em>joi</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入包</span></span><br><span class="line"><span class="keyword">const</span> joi = <span class="built_in">require</span>(<span class="string">&#x27;joi&#x27;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>app.js:它属于是一个总端吧,如果你进行修改密码的操作,那么它会将你分配到修改密码的路由中去操作.</p>
-</li>
-</ul>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <div class="declare">
-      <ul class="post-copyright">
-        <li>
-          <i class="ri-copyright-line"></i>
-          <strong>Copyright： </strong>
-          
-          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-          
-        </li>
-      </ul>
-    </div>
-    
-    <footer class="article-footer">
-       
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        分享
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.coder-life.top/2022/07/28/Node-js%E7%9A%84%E5%A4%A7%E4%BA%8B%E4%BB%B6%E9%A1%B9%E7%9B%AE-%E5%90%8E%E7%BB%AD%E8%A1%A5%E5%9D%91/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-  <nav class="article-nav">
-    
-      <a href="/2022/08/02/%E5%85%B3%E4%BA%8Enode.js%E4%B9%A6%E5%86%99%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E6%8E%A5%E5%8F%A3/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            关于node.js书写登录注册接口
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2022/07/26/Node%E4%B8%AD%E8%BF%90%E7%94%A8Mysql%E8%AF%AD%E5%8F%A5%E8%BF%9B%E8%A1%8C%E5%A2%9E%E6%94%B9%E5%88%A0%E6%9F%A5/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Node中运用Mysql语句进行增改删查</div>
-      </a>
-    
-  </nav>
-
-   
- 
-   
-    
-    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
-    <div id="twikoo" class="twikoo"></div>
-    <script>
-        twikoo.init({
-            envId: ""
-        })
-    </script>
- 
-</article>
-
 </section>
       <footer class="footer">
   <div class="outer">
@@ -362,22 +237,6 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
