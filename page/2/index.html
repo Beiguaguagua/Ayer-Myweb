@@ -152,6 +152,62 @@
     
     
     <article
+  id="post-JavaScript函数封装-上下缓动动画-只支持-滚动动画过渡-不适合左右位移"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E4%B8%8A%E4%B8%8B%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E5%8F%AA%E6%94%AF%E6%8C%81-%E6%BB%9A%E5%8A%A8%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1-%E4%B8%8D%E9%80%82%E5%90%88%E5%B7%A6%E5%8F%B3%E4%BD%8D%E7%A7%BB/"
+    >JavaScript函数封装--上下缓动动画(只支持(滚动动画过渡,不适合左右位移))</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/07/24/JavaScript%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85-%E4%B8%8A%E4%B8%8B%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB-%E5%8F%AA%E6%94%AF%E6%8C%81-%E6%BB%9A%E5%8A%A8%E5%8A%A8%E7%94%BB%E8%BF%87%E6%B8%A1-%E4%B8%8D%E9%80%82%E5%90%88%E5%B7%A6%E5%8F%B3%E4%BD%8D%E7%A7%BB/" class="article-date">
+  <time datetime="2022-07-24T09:07:43.000Z" itemprop="datePublished">2022-07-24</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="函数封装"><a href="#函数封装" class="headerlink" title="函数封装"></a>函数封装</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// obj:盒子对象</span></span><br><span class="line"><span class="comment">// target:目标位置</span></span><br><span class="line"><span class="comment">// time:运动时间</span></span><br><span class="line"><span class="comment">// callback:回调函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">move</span>(<span class="params">obj,target,time,callback</span>)&#123;</span><br><span class="line">				<span class="comment">// 清除定时器,防止多次点击加快移动速度和创建新的定时器</span></span><br><span class="line">				<span class="built_in">clearInterval</span>(obj.<span class="property">timer</span>)</span><br><span class="line">				<span class="comment">// 结束</span></span><br><span class="line">				obj.<span class="property">timer</span> = <span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">					<span class="comment">// 缓动动画原理</span></span><br><span class="line">					<span class="comment">// (目标位置-现在位置)/10</span></span><br><span class="line">					<span class="keyword">var</span> step = (target - <span class="variable language_">window</span>.<span class="property">pageYOffset</span>) / <span class="number">10</span>;</span><br><span class="line">					step  = step &gt; <span class="number">0</span> ?<span class="title class_">Math</span>.<span class="title function_">ceil</span>(step) : <span class="title class_">Math</span>.<span class="title function_">floor</span>(step)</span><br><span class="line">					<span class="comment">// 步行算法结束</span></span><br><span class="line">					<span class="keyword">if</span>(<span class="variable language_">window</span>.<span class="property">pageYOffset</span> == target)&#123;</span><br><span class="line">						<span class="built_in">clearInterval</span>(obj.<span class="property">timer</span>)</span><br><span class="line">						<span class="comment">// 回调函数,如果有就执行,如果没有就不执行</span></span><br><span class="line">						<span class="keyword">if</span>(callback)&#123;</span><br><span class="line">							<span class="title function_">callback</span>()</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="comment">// 回调函数结束</span></span><br><span class="line">					&#125;</span><br><span class="line">					<span class="comment">// obj.style.left = window.pageYOffset + step +&#x27;px&#x27;</span></span><br><span class="line">					<span class="variable language_">window</span>.<span class="title function_">scroll</span>(<span class="number">0</span>,<span class="variable language_">window</span>.<span class="property">pageYOffset</span> + step)</span><br><span class="line">				&#125;,time)</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数运用"><a href="#函数运用" class="headerlink" title="函数运用"></a>函数运用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">move</span>(obj,time,target)</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-JavaScript函数封装-缓动动画-不支持-回到顶部-的动画的过渡"
   class="article article-type-post"
   itemscope
