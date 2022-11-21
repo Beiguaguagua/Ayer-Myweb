@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>SQL语句使用 |  🐱BeiGua&#39;s blogger🐕</title>
+      <title>Vue修改主题的方法 |  🐱BeiGua&#39;s blogger🐕</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,7 +56,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-sql语句使用"
+  id="post-Vue修改主题的方法"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -67,7 +67,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  SQL语句使用
+  Vue修改主题的方法
 </h1>
  
 
@@ -75,15 +75,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/07/26/sql%E8%AF%AD%E5%8F%A5%E4%BD%BF%E7%94%A8/" class="article-date">
-  <time datetime="2022-07-26T08:00:00.000Z" itemprop="datePublished">2022-07-26</time>
+      <a href="/2022/11/21/Vue%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2022-11-21T06:55:26.000Z" itemprop="datePublished">2022-11-21</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">306</span>
+            <span class="post-count">351</span>
         </span>
     </span>
 
@@ -107,25 +107,15 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="SQL的Select语句"><a href="#SQL的Select语句" class="headerlink" title="SQL的Select语句"></a>SQL的Select语句</h2><p>&lt;!&gt;大小写不敏感</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从from指定的[表中],查询出所有数据, * 表示所有列</span></span><br><span class="line"><span class="string">SELECT</span> <span class="string">*</span> <span class="string">FROM</span> <span class="string">表名称</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从from指定的[表中],查询出指定的 列名称 的数据</span></span><br><span class="line"><span class="string">SELECT</span> <span class="string">列名称</span> <span class="string">FROM</span> <span class="string">表名称</span></span><br></pre></td></tr></table></figure>
+  <h3 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h3><h5 id="1-通过判定-icon-图标去实现黑白的判断"><a href="#1-通过判定-icon-图标去实现黑白的判断" class="headerlink" title="(1)通过判定 icon 图标去实现黑白的判断"></a>(1)通过判定 icon 图标去实现黑白的判断</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 这是vue的伪代码 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 这是其他组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">:class</span>=<span class="string">&quot;icon&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&quot;less&quot;</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-id">#app</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/* 后续整体颜色都可以通过var(--themeColor)去实现 */</span></span></span><br><span class="line"><span class="language-css">    <span class="attr">--themeColor</span>: white;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="SQL的INSERT-INTO-语句"><a href="#SQL的INSERT-INTO-语句" class="headerlink" title="SQL的INSERT INTO 语句"></a>SQL的INSERT INTO 语句</h2><p>&lt;!&gt;向数据表中插入新的数据行</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">INSERT</span> <span class="string">INTO</span> <span class="string">table_name(列1,列2......)</span> <span class="string">values</span> <span class="string">(值1,值2......)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 例子:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1.修改单个数据</span></span><br><span class="line"><span class="string">INSERT</span> <span class="string">INTO</span> <span class="string">users</span> <span class="string">(username,password)</span> <span class="string">values</span> <span class="string">(&#x27;Toy&#x27;,&#x27;246810&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.修改多个数据</span></span><br><span class="line"><span class="string">update</span> <span class="string">users</span> <span class="string">set</span> <span class="string">password</span> <span class="string">=</span> <span class="string">&#x27;123456&#x27;</span><span class="string">,status</span> <span class="string">=</span> <span class="string">&#x27;1&#x27;</span> <span class="string">where</span> <span class="string">username</span> <span class="string">=</span> <span class="string">&#x27;ls&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 
-<h2 id="SQL的UPDATE语句"><a href="#SQL的UPDATE语句" class="headerlink" title="SQL的UPDATE语句"></a>SQL的UPDATE语句</h2><p>&lt;!&gt;修改表中的数据</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">UPDATE</span> <span class="string">表名称</span> <span class="string">SET</span> <span class="string">列名称</span> <span class="string">=</span> <span class="string">新值</span> <span class="string">WHERE</span> <span class="string">列名称</span> <span class="string">=</span> <span class="string">某值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 例子:</span></span><br><span class="line"></span><br><span class="line"><span class="string">update</span> <span class="string">users</span> <span class="string">set</span> <span class="string">password</span> <span class="string">=</span> <span class="string">&#x27;123456&#x27;</span> <span class="string">where</span> <span class="string">username</span> <span class="string">=</span> <span class="string">&#x27;ls&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="comment">// dark情况下:icon:&#x27;xxx-xxx-dark&#x27;</span></span><br><span class="line">      <span class="attr">icon</span>:<span class="string">&#x27;xxx-xxx-white&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>:&#123;</span><br><span class="line">    <span class="comment">// 这是使用busevent事件总线传值</span></span><br><span class="line">    <span class="title function_">go</span>(<span class="params"></span>)&#123;</span><br><span class="line">      bus.$emit(<span class="string">&#x27;icon&#x27;</span>,<span class="variable language_">this</span>.<span class="property">icon</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="SQL的DELETE语句"><a href="#SQL的DELETE语句" class="headerlink" title="SQL的DELETE语句"></a>SQL的DELETE语句</h2><p>&lt;!&gt;删除表中的数据</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">DELETE</span> <span class="string">FROM</span> <span class="string">表名称</span> <span class="string">WHERE</span> <span class="string">列名称</span> <span class="string">=</span> <span class="string">值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 例子:</span></span><br><span class="line"><span class="string">DELETE</span> <span class="string">FROM</span> <span class="string">users</span> <span class="string">WHERE</span> <span class="string">id</span> <span class="string">=</span> <span class="string">&#x27;4&#x27;</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-然后通过-busEvent-js-传值"><a href="#2-然后通过-busEvent-js-传值" class="headerlink" title="(2)然后通过 busEvent.js 传值"></a>(2)然后通过 busEvent.js 传值</h5><h5 id="3-实现这些的前提-在-APP-vue-中得先-var-一个整体颜色—–实现代码如下"><a href="#3-实现这些的前提-在-APP-vue-中得先-var-一个整体颜色—–实现代码如下" class="headerlink" title="(3)实现这些的前提:在 APP.vue 中得先 var 一个整体颜色—–实现代码如下"></a>(3)实现这些的前提:在 APP.vue 中得先 var 一个整体颜色—–实现代码如下</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 这是vue的伪代码 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&quot;less&quot;</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-id">#app</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/* 后续整体颜色都可以通过var(--themeColor)去实现 */</span></span></span><br><span class="line"><span class="language-css">    <span class="attr">--themeColor</span>: white;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="SQL的ORDERBY语句"><a href="#SQL的ORDERBY语句" class="headerlink" title="SQL的ORDERBY语句"></a>SQL的ORDERBY语句</h2><p>&lt;!&gt;排序<br>DESC:降序排序<br>默认:升序排序(ASC)</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.单个排序</span></span><br><span class="line"><span class="comment"># 升序</span></span><br><span class="line"><span class="string">Select</span> <span class="string">*</span> <span class="string">from</span> <span class="string">users</span> <span class="string">ORDER</span> <span class="string">BY</span> <span class="string">status</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 降序</span></span><br><span class="line"><span class="string">Select</span> <span class="string">*</span> <span class="string">from</span> <span class="string">users</span> <span class="string">ORDER</span> <span class="string">BY</span> <span class="string">status</span> <span class="string">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="number">2</span><span class="string">.多重排序</span></span><br><span class="line"><span class="string">Select</span> <span class="string">*</span> <span class="string">from</span> <span class="string">users</span> <span class="string">ORDER</span> <span class="string">BY</span> <span class="string">status</span> <span class="string">desc,</span> <span class="string">username</span> <span class="string">asc</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="SQL的COUNT-函数"><a href="#SQL的COUNT-函数" class="headerlink" title="SQL的COUNT(*)函数"></a>SQL的COUNT(*)函数</h2><p>&lt;!&gt;查询数量</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">select</span> <span class="string">count(*)</span> <span class="string">from</span> <span class="string">users</span> <span class="string">where</span> <span class="string">status</span> <span class="string">=</span> <span class="string">&#x27;0&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="string">AS:给列起别名</span></span><br><span class="line"><span class="string">select</span> <span class="string">count(*)</span> <span class="string">AS</span> <span class="string">total</span> <span class="string">from</span> <span class="string">users</span> <span class="string">where</span> <span class="string">status</span> <span class="string">=</span> <span class="string">&#x27;0&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="comment">//用于接受其他页面传来的icon</span></span><br><span class="line">      <span class="attr">iconName</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="comment">// 这是使用busevent事件总线传值</span></span><br><span class="line">    <span class="comment">// 这里的valStore是在Vuex里面的</span></span><br><span class="line">    <span class="title function_">get</span>(<span class="params"></span>) &#123;</span><br><span class="line">      bus.$on(<span class="string">&#x27;icon&#x27;</span>, <span class="function"><span class="params">val</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">iconName</span> = val</span><br><span class="line">        <span class="keyword">switch</span> (<span class="variable language_">this</span>.<span class="property">iconName</span>) &#123;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">&#x27;xxx-xxx-white&#x27;</span>:</span><br><span class="line">            docment.<span class="title function_">querrySelector</span>(<span class="string">&#x27;#app&#x27;</span>).<span class="property">style</span>.<span class="title function_">setProptype</span>(<span class="string">&#x27;--themeColor&#x27;</span>, valStore)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">          <span class="keyword">case</span> <span class="string">&#x27;xxx-xxx-dark&#x27;</span>:</span><br><span class="line">            docment.<span class="title function_">querrySelector</span>(<span class="string">&#x27;#app&#x27;</span>).<span class="property">style</span>.<span class="title function_">setProptype</span>(<span class="string">&#x27;--themeColor&#x27;</span>, valStore)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -190,32 +180,21 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.coder-life.top/2022/07/26/sql%E8%AF%AD%E5%8F%A5%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.coder-life.top/2022/11/21/Vue%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%95/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li></ul>
-
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/2022/07/26/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            web开发模式
-          
-        </div>
-      </a>
     
-    
-      <a href="/2022/07/25/Express%E8%B7%AF%E7%94%B1/" class="article-nav-link">
+      <a href="/2022/10/15/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Express路由</div>
+        <div class="article-nav-title">模糊查询的实现</div>
       </a>
     
   </nav>
